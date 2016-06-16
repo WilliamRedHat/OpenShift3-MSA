@@ -5,7 +5,7 @@
 	<table style="margin: 0px auto; width: 30em; border: 0px;">
 		<tr>
 			<td><input type="text" name="query" size="50">
-				<button type="submit">Search</button></td>
+				<button type="submit">Recherche</button></td>
 		</tr>
 	</table>
 </form>
@@ -21,15 +21,15 @@
 			<td style="border: 1px solid black; padding: 5px">${product.description}</td>
 			<td style="border: 1px solid black; padding: 5px">Product
 				Dimensions: ${product.length} x ${product.width} x ${product.height}
-				<br /> Product Weight: ${product.weight}
+				<br />Poids du produit: ${product.weight}
 			</td>
 			<td style="border: 1px solid black; padding: 5px">
 				<p style="font-size: 1.5em">$${product.price}</p>
-				<p>In Stock: ${product.availability}</p> <c:if
+				<p>En Stock: ${product.availability}</p> <c:if
 					test="${sessionScope.customer != null}">
 					<form target="_self" method="post">
 						<input type="hidden" name="sku" value="${product.sku}">
-						<button name="purchase" value="true" type="submit">Purchase</button>
+						<button name="purchase" value="true" type="submit">Ajouter au panier</button>
 					</form>
 				</c:if>
 			</td>
